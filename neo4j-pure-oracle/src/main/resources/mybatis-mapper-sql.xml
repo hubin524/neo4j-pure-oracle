@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+    <!-- springboot 打印sql,必须指定到每一个Mapper-->
+    <logger name="com.tydic.scaffold.temp.dao.DemoMapper" level="DEBUG"/>
+
+
+    <!-- 开启mybatis-sql日志 -->
+    <logger name="com.apache.ibatis" level="TRACE"/>
+      
+    <logger name="java.sql.Connection" level="DEBUG"/>
+      
+    <logger name="java.sql.Statement" level="DEBUG"/>
+      
+    <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+</included>

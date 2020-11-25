@@ -1,0 +1,434 @@
+15:38:07.285 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Starting ScaffoldApplication on SD-20200618IKAF with PID 9600 (F:\basic_dev_platform\target\classes started by Administrator in F:\basic_dev_platform)
+15:38:07.320 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - The following profiles are active: dev
+15:38:07.428 scaffold [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a942c18: startup date [Wed Aug 26 15:38:07 CST 2020]; root of context hierarchy
+15:38:10.008 scaffold [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+15:38:10.039 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+15:38:10.040 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+15:38:10.040 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+15:38:10.073 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+15:38:10.073 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+15:38:10.074 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+15:38:10.206 scaffold [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:38:10.842 scaffold [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:38:11.181 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$553ba73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:38:11.406 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9e0182ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:38:11.420 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:38:11.425 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6296474f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:38:11.440 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myMethodSecurityConfig' of type [com.tydic.framework.config.spring.sercurity.MyMethodSecurityConfig$$EnhancerBySpringCGLIB$$dac0b90e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:38:11.464 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:38:12.267 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+15:38:12.287 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+15:38:12.302 scaffold [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:38:12.303 scaffold [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:38:12.323 scaffold [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\jdk1.8\jdk1.8.0_192\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\oracle\ora90\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\jdk1.8\jdk1.8.0_192\bin;G:\apache-maven-3.6.3\bin;E:\SVN\bin;E:\gitclient\git\Git\cmd;E:\gitclient\git\TortoiseGit\bin;E:\UE\;.]
+15:38:12.602 scaffold [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring embedded WebApplicationContext
+15:38:13.649 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:38:13.650 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:38:13.651 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:38:13.651 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:38:13.652 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+15:38:13.652 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'parameter2HeaderAuthenticationFilter' to: [/*]
+15:38:13.652 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'jwtFilter' to: [/*]
+15:38:13.653 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'accessTokenSetterFilter' to: [/*]
+15:38:13.653 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'automaticProlongationFilter' to: [/*]
+15:38:13.653 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:38:16.884 scaffold [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/G:/work/mavenRepository/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/G:/work/mavenRepository/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'batchInsertNeo4jController' method 
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jRelation(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertRelationEntity)
+to {[/batchInsertNeo4j/startBatchInsertNeo4j],methods=[POST]}: There is already 'batchInsertNeo4jController' bean method
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jNode(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertNodeEntity) mapped.
+15:38:16.917 scaffold [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:38:16.936 scaffold [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+15:38:16.961 scaffold [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/G:/work/mavenRepository/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/G:/work/mavenRepository/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'batchInsertNeo4jController' method 
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jRelation(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertRelationEntity)
+to {[/batchInsertNeo4j/startBatchInsertNeo4j],methods=[POST]}: There is already 'batchInsertNeo4jController' bean method
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jNode(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertNodeEntity) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:732)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.tydic.scaffold.ScaffoldApplication.main(ScaffoldApplication.java:20)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/G:/work/mavenRepository/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'batchInsertNeo4jController' method 
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jRelation(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertRelationEntity)
+to {[/batchInsertNeo4j/startBatchInsertNeo4j],methods=[POST]}: There is already 'batchInsertNeo4jController' bean method
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jNode(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertNodeEntity) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:732)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1291)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'batchInsertNeo4jController' method 
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jRelation(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertRelationEntity)
+to {[/batchInsertNeo4j/startBatchInsertNeo4j],methods=[POST]}: There is already 'batchInsertNeo4jController' bean method
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jNode(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertNodeEntity) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1291)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'batchInsertNeo4jController' method 
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jRelation(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertRelationEntity)
+to {[/batchInsertNeo4j/startBatchInsertNeo4j],methods=[POST]}: There is already 'batchInsertNeo4jController' bean method
+public com.tydic.core.rational.Return com.tydic.scaffold.batchInsertNeo4j.controller.BatchInsertNeo4jController.startBatchInsertNeo4jNode(com.tydic.scaffold.batchInsertNeo4j.model.BatchInsertNodeEntity) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:580)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:544)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:250)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:248)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:218)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1704)
+	... 50 common frames omitted
+15:40:47.963 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Starting ScaffoldApplication on SD-20200618IKAF with PID 13136 (F:\basic_dev_platform\target\classes started by Administrator in F:\basic_dev_platform)
+15:40:47.968 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - The following profiles are active: dev
+15:40:48.020 scaffold [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63376bed: startup date [Wed Aug 26 15:40:48 CST 2020]; root of context hierarchy
+15:40:49.080 scaffold [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+15:40:49.101 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+15:40:49.101 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+15:40:49.101 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+15:40:49.111 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+15:40:49.111 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+15:40:49.112 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+15:40:49.147 scaffold [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:40:49.490 scaffold [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:40:49.689 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7238f5a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:40:49.848 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$ae6bde3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:40:49.860 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:40:49.864 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@600f5704' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:40:49.871 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myMethodSecurityConfig' of type [com.tydic.framework.config.spring.sercurity.MyMethodSecurityConfig$$EnhancerBySpringCGLIB$$47a5f444] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:40:49.894 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:40:50.554 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+15:40:50.568 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+15:40:50.580 scaffold [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:40:50.580 scaffold [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+15:40:50.585 scaffold [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\jdk1.8\jdk1.8.0_192\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\oracle\ora90\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\jdk1.8\jdk1.8.0_192\bin;G:\apache-maven-3.6.3\bin;E:\SVN\bin;E:\gitclient\git\Git\cmd;E:\gitclient\git\TortoiseGit\bin;E:\UE\;.]
+15:40:50.776 scaffold [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring embedded WebApplicationContext
+15:40:51.484 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15:40:51.485 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15:40:51.486 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15:40:51.486 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+15:40:51.487 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+15:40:51.487 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'parameter2HeaderAuthenticationFilter' to: [/*]
+15:40:51.487 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'jwtFilter' to: [/*]
+15:40:51.487 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'accessTokenSetterFilter' to: [/*]
+15:40:51.488 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'automaticProlongationFilter' to: [/*]
+15:40:51.488 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+15:40:53.819 scaffold [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'taskExecutor'
+15:40:54.036 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+15:40:54.036 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+15:40:54.036 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+15:40:54.037 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/springfox-swagger-ui/**'], []
+15:40:54.037 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/error'], []
+15:40:54.160 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@179ee36b, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e4395c, org.springframework.security.web.header.HeaderWriterFilter@3751acd7, org.springframework.security.web.authentication.logout.LogoutFilter@1201769d, com.tydic.framework.spring.security.oauth2.code.Parameter2HeaderAuthenticationFilter@7741c643, com.tydic.framework.spring.security.oauth2.code.JwtAuthenticationFilter@66f6c53e, com.tydic.framework.spring.security.oauth2.code.header.AccessTokenSetterFilter@480704dc, com.tydic.framework.spring.security.oauth2.code.refresh.JwtAutomaticProlongationFilter@4e47287, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72b2c5ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1491cd6c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67763ebe, org.springframework.security.web.session.SessionManagementFilter@611c3eae, org.springframework.security.web.access.ExceptionTranslationFilter@6cdbe5ec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b01cb8d]
+15:40:54.270 scaffold [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:40:55.215 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+15:40:55.215 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+15:40:55.216 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+15:40:55.217 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+15:40:56.015 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:40:56.018 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:40:56.026 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+15:40:56.032 scaffold [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:40:56.032 scaffold [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:40:56.111 scaffold [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:40:56.197 scaffold [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:40:56.663 scaffold [main] INFO  com.zaxxer.hikari.HikariDataSource - Tiny Dicy Pool - Starting...
+15:40:57.600 scaffold [main] INFO  com.zaxxer.hikari.HikariDataSource - Tiny Dicy Pool - Start completed.
+15:40:57.853 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+15:40:57.854 scaffold [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+15:40:57.882 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/scaffold'
+15:40:57.888 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Started ScaffoldApplication in 31.781 seconds (JVM running for 33.737)
+15:41:10.942 scaffold [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:42:19.034 scaffold [http-nio-8081-exec-10] INFO  c.t.f.o.a.h.AhtelOauth2HelperBeanImpl - 接收到accessToken:478ae548294adfca87bba15f2b1ac5fae2860ffd8c5ab6213961feb4485bcb1c83fc2602dfa64310b34785331e434fa2d4cf61368380ae7cac63a382ae8cd46d3d19c3f35257ce0468b8d8437082f6dc2c39273bf7ad54fe986840f2fc4098f765b092177ca6359da62505f37e343ac22f47985ce30f84dec189493228b45edd71f7f1f658cf7dcbac7f92089333bb201abfd06ac265d5b41e07ef42a49a1535a998292cb7cb4b66e9b3ab966601531333b588943280f5f429cf875132e9695e58e14fa88a1d5d4047f871e8bb54d4863894ba11c98e9b82ef78fd1edddfcb5fd6f936887227717ab634e773897419c494c50069b861e3339f09bb57c065f44c
+15:42:19.374 scaffold [http-nio-8081-exec-10] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+15:42:19.385 scaffold [http-nio-8081-exec-10] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+15:43:28.319 scaffold [http-nio-8081-exec-2] INFO  c.t.f.s.s.o.c.r.s.CacheableRefreshStrategy - jwtToken发布超过60000ms,需要刷新.
+15:43:28.382 scaffold [http-nio-8081-exec-2] INFO  com.tydic.neo4j.Neo4jSessionManager - begin init neo4j param
+15:43:28.383 scaffold [http-nio-8081-exec-2] INFO  com.tydic.neo4j.Neo4jSessionManager - end init neo4j param={connectionTimeoutMillis=10000, password=neo4j, maxConnectionPoolSize=10, userName=neo4j, uri=bolt://192.168.129.44:7687}
+15:43:28.675 scaffold [http-nio-8081-exec-2] INFO  Driver - Direct driver instance 2001906110 created for server address 192.168.129.44:7687
+15:43:29.955 scaffold [http-nio-8081-exec-2] INFO  c.t.s.queryInterface.QueryCommon - find data size=1,by nosql=MATCH (user:User)-[t]-(person:NaturalPerson) WHERE user.serviceNbr = {serviceNbr}  RETURN person.oneidPrdInstId as oneidPrdInstId, person.oneidServiceNbr as oneidServiceNbr,user.prdInstId as prdInstId,user.prdInstName as prdInstName,user.serviceNbr as serviceNbr,user.userAccount as userAccount,user.prdId as prdId,user.prdInstStasId as prdInstStasId,user.installDate as installDate,user.completeDate as completeDate,user.acctId as acctId,user.custId as custId,user.netNum as netNum,user.cImsi as cImsi,user.lImsi as lImsi,user.gImsi as gImsi,user.simCard as simCard, user.meid as meid,user.imei as imei and param={query_use=0, latnId=551, numberType=1, serviceNbr=18963712673}
+15:43:29.955 scaffold [http-nio-8081-exec-2] INFO  c.t.s.queryInterface.QueryCommon - 查询到自然人ID信息 , oneidPrdInstId=55120001344832
+15:43:29.955 scaffold [http-nio-8081-exec-2] INFO  c.t.s.queryInterface.QueryCommon - total use count =1
+15:43:29.998 scaffold [http-nio-8081-exec-2] INFO  c.t.s.queryInterface.QueryCommon - find data size=1,by nosql=MATCH (user:User)-[t]-(person:NaturalPerson) WHERE user.serviceNbr = {serviceNbr}  RETURN person.oneidPrdInstId as oneidPrdInstId, person.oneidServiceNbr as oneidServiceNbr,user.prdInstId as prdInstId,user.prdInstName as prdInstName,user.serviceNbr as serviceNbr,user.userAccount as userAccount,user.prdId as prdId,user.prdInstStasId as prdInstStasId,user.installDate as installDate,user.completeDate as completeDate,user.acctId as acctId,user.custId as custId,user.netNum as netNum,user.cImsi as cImsi,user.lImsi as lImsi,user.gImsi as gImsi,user.simCard as simCard, user.meid as meid,user.imei as imei and param={query_use=0, latnId=551, numberType=1, oneidPrdInstId1=55120001344832, serviceNbr=19965223581, oneidPrdInstId=55120001344832}
+15:43:29.998 scaffold [http-nio-8081-exec-2] INFO  c.t.s.queryInterface.QueryCommon - 查询到自然人ID信息 , oneidPrdInstId=55120017464432
+15:43:29.999 scaffold [http-nio-8081-exec-2] INFO  c.t.s.queryInterface.QueryCommon - total use count =1
+15:43:29.999 scaffold [http-nio-8081-exec-2] INFO  c.t.s.q.s.i.QueryNaturalRelServiceImpl - begin query shortest path neo4j by sql=MATCH (cust:NaturalPerson{oneidPrdInstId:{oneidPrdInstId1}}),(cc:NaturalPerson{oneidPrdInstId:{oneidPrdInstId2}}), p=shortestpath((cust)-[*]-(cc))   RETURN p
+15:43:30.038 scaffold [http-nio-8081-exec-2] INFO  c.t.s.q.s.i.QueryNaturalRelServiceImpl -  最短路径长度为：1
+15:43:30.038 scaffold [http-nio-8081-exec-2] INFO  c.t.s.q.s.i.QueryNaturalRelServiceImpl - ====================================
+15:43:30.039 scaffold [http-nio-8081-exec-2] INFO  c.t.s.q.s.i.QueryNaturalRelServiceImpl - 路径关系 : {oneidPrdInstName:52张三,oneidPrdInstId:55120001344832,oneidServiceNbr:18963712673}-[person_rel:1]-{oneidPrdInstName:27张三,oneidPrdInstId:55120017464432,oneidServiceNbr:19965223581}
+16:04:10.653 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Starting ScaffoldApplication on SD-20200618IKAF with PID 12604 (F:\basic_dev_platform\target\classes started by Administrator in F:\basic_dev_platform)
+16:04:10.658 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - The following profiles are active: dev
+16:04:10.740 scaffold [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63376bed: startup date [Wed Aug 26 16:04:10 CST 2020]; root of context hierarchy
+16:04:13.396 scaffold [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+16:04:13.429 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+16:04:13.430 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+16:04:13.431 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+16:04:13.454 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+16:04:13.455 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+16:04:13.455 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+16:04:13.517 scaffold [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:04:13.983 scaffold [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+16:04:14.194 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$61e5a595] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:04:14.338 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$fa936dcf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:04:14.350 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:04:14.355 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@79b2852b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:04:14.366 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myMethodSecurityConfig' of type [com.tydic.framework.config.spring.sercurity.MyMethodSecurityConfig$$EnhancerBySpringCGLIB$$3752a430] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:04:14.386 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:04:15.012 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+16:04:15.025 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+16:04:15.037 scaffold [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:04:15.037 scaffold [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:04:15.043 scaffold [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\jdk1.8\jdk1.8.0_192\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\oracle\ora90\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\jdk1.8\jdk1.8.0_192\bin;G:\apache-maven-3.6.3\bin;E:\SVN\bin;E:\gitclient\git\Git\cmd;E:\gitclient\git\TortoiseGit\bin;E:\UE\;.]
+16:04:15.235 scaffold [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring embedded WebApplicationContext
+16:04:16.111 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:04:16.112 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:04:16.112 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:04:16.112 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:04:16.113 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+16:04:16.113 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'parameter2HeaderAuthenticationFilter' to: [/*]
+16:04:16.114 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'jwtFilter' to: [/*]
+16:04:16.114 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'accessTokenSetterFilter' to: [/*]
+16:04:16.114 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'automaticProlongationFilter' to: [/*]
+16:04:16.115 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:04:18.086 scaffold [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'taskExecutor'
+16:04:18.292 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+16:04:18.292 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+16:04:18.292 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+16:04:18.293 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/springfox-swagger-ui/**'], []
+16:04:18.293 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/error'], []
+16:04:18.422 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23648d2d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cc1bf20, org.springframework.security.web.header.HeaderWriterFilter@43c39321, org.springframework.security.web.authentication.logout.LogoutFilter@383cdd4d, com.tydic.framework.spring.security.oauth2.code.Parameter2HeaderAuthenticationFilter@57fe2192, com.tydic.framework.spring.security.oauth2.code.JwtAuthenticationFilter@5909b8bc, com.tydic.framework.spring.security.oauth2.code.header.AccessTokenSetterFilter@4d866ec3, com.tydic.framework.spring.security.oauth2.code.refresh.JwtAutomaticProlongationFilter@3c6da6fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5abf6a99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25567581, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69feb4d9, org.springframework.security.web.session.SessionManagementFilter@6537ac, org.springframework.security.web.access.ExceptionTranslationFilter@2e2f20b8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11e17893]
+16:04:18.499 scaffold [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:04:19.280 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:04:19.281 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:04:19.282 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:04:19.282 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:04:20.054 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:04:20.057 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:04:20.071 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:04:20.078 scaffold [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+16:04:20.079 scaffold [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+16:04:20.100 scaffold [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+16:04:20.164 scaffold [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+16:04:20.506 scaffold [main] INFO  com.zaxxer.hikari.HikariDataSource - Tiny Dicy Pool - Starting...
+16:04:21.283 scaffold [main] INFO  com.zaxxer.hikari.HikariDataSource - Tiny Dicy Pool - Start completed.
+16:04:21.452 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+16:04:21.454 scaffold [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:04:21.476 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/scaffold'
+16:04:21.483 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Started ScaffoldApplication in 22.159 seconds (JVM running for 24.283)
+16:04:40.344 scaffold [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:06:39.292 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Starting ScaffoldApplication on SD-20200618IKAF with PID 10836 (F:\basic_dev_platform\target\classes started by Administrator in F:\basic_dev_platform)
+16:06:39.295 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - The following profiles are active: dev
+16:06:39.354 scaffold [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@63376bed: startup date [Wed Aug 26 16:06:39 CST 2020]; root of context hierarchy
+16:06:40.645 scaffold [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+16:06:40.667 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+16:06:40.667 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+16:06:40.668 scaffold [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+16:06:40.678 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'queryNaturalPersonsDao' and 'com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao' mapperInterface. Bean already defined with the same name!
+16:06:40.678 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'demoMapper' and 'com.tydic.scaffold.temp.dao.DemoMapper' mapperInterface. Bean already defined with the same name!
+16:06:40.678 scaffold [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.tydic.scaffold]' package. Please check your configuration.
+16:06:40.717 scaffold [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:06:41.092 scaffold [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+16:06:41.320 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96c87b31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:06:41.492 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$2f76436b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:06:41.505 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:06:41.509 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@44b21f9f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:06:41.521 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myMethodSecurityConfig' of type [com.tydic.framework.config.spring.sercurity.MyMethodSecurityConfig$$EnhancerBySpringCGLIB$$6c3579cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:06:41.547 scaffold [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:06:42.229 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+16:06:42.244 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+16:06:42.258 scaffold [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:06:42.259 scaffold [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+16:06:42.265 scaffold [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\jdk1.8\jdk1.8.0_192\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\oracle\ora90\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\jdk1.8\jdk1.8.0_192\bin;G:\apache-maven-3.6.3\bin;E:\SVN\bin;E:\gitclient\git\Git\cmd;E:\gitclient\git\TortoiseGit\bin;E:\UE\;.]
+16:06:42.460 scaffold [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring embedded WebApplicationContext
+16:06:43.233 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:06:43.234 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16:06:43.235 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16:06:43.236 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16:06:43.237 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+16:06:43.238 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'parameter2HeaderAuthenticationFilter' to: [/*]
+16:06:43.238 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'jwtFilter' to: [/*]
+16:06:43.239 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'accessTokenSetterFilter' to: [/*]
+16:06:43.239 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'automaticProlongationFilter' to: [/*]
+16:06:43.240 scaffold [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+16:06:45.664 scaffold [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService  'taskExecutor'
+16:06:45.876 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+16:06:45.876 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+16:06:45.876 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+16:06:45.876 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/springfox-swagger-ui/**'], []
+16:06:45.877 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/error'], []
+16:06:45.994 scaffold [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ad1c363, org.springframework.security.web.context.SecurityContextPersistenceFilter@401317a0, org.springframework.security.web.header.HeaderWriterFilter@72b2c5ed, org.springframework.security.web.authentication.logout.LogoutFilter@24691c5, com.tydic.framework.spring.security.oauth2.code.Parameter2HeaderAuthenticationFilter@3d1e017f, com.tydic.framework.spring.security.oauth2.code.JwtAuthenticationFilter@366adcf0, com.tydic.framework.spring.security.oauth2.code.header.AccessTokenSetterFilter@48485104, com.tydic.framework.spring.security.oauth2.code.refresh.JwtAutomaticProlongationFilter@125ef9c4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4af7dd6a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52aa7742, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@446b64b3, org.springframework.security.web.session.SessionManagementFilter@423f8a73, org.springframework.security.web.access.ExceptionTranslationFilter@17176b18, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b6c2be6]
+16:06:46.076 scaffold [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+16:06:46.805 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+16:06:46.806 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+16:06:46.807 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+16:06:46.807 scaffold [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+16:06:47.462 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:06:47.464 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:06:47.473 scaffold [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:06:47.479 scaffold [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+16:06:47.479 scaffold [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+16:06:47.495 scaffold [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+16:06:47.551 scaffold [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+16:06:47.894 scaffold [main] INFO  com.zaxxer.hikari.HikariDataSource - Tiny Dicy Pool - Starting...
+16:06:48.672 scaffold [main] INFO  com.zaxxer.hikari.HikariDataSource - Tiny Dicy Pool - Start completed.
+16:06:48.863 scaffold [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+16:06:48.865 scaffold [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+16:06:48.892 scaffold [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/scaffold'
+16:06:48.898 scaffold [main] INFO  c.tydic.scaffold.ScaffoldApplication - Started ScaffoldApplication in 31.675 seconds (JVM running for 33.791)
+16:07:02.693 scaffold [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/scaffold] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:07:40.676 scaffold [http-nio-8081-exec-8] INFO  c.t.f.o.a.h.AhtelOauth2HelperBeanImpl - 接收到accessToken:5376a183589b68e91ce24d9759d4bedbe1a3f5016c3429323337c3ad1542103399dae34d9ef4e5ef8a569ab6acb51aa025c07b9905ebc88cab821cbcc7415c6559a761e4d282fbcdc9783f6cbb0f412e6f4bb7600527e43c8ecfa925009f469afd97265879fa8dc4a9237064ae3ad0baefbbedac343e0fc3de8fff7ccb5787852fb8a5458c0561f1c6528364e2bad5da33b2fa47f2c5ba8a863ace94477b4c9e4784c96c04ed5efceeb9525e9588378f3f81cd93eaddcb3953ddf4829b13da6082056c77744b8d97b7c0800202d262689da99794559d5a08866ed6be211157f363a76cfdd121f1669635c14ebe066823ff2c1c2b98e1e13528d5e3f1dcb157bf
+16:07:40.895 scaffold [http-nio-8081-exec-8] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+16:07:40.898 scaffold [http-nio-8081-exec-8] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+16:08:38.681 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation startThreadRelation confThreadNum=6,intoThreadNum=6,relationName=qq_natural
+16:08:38.684 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  startThread =6
+16:08:38.687 scaffold [Thread-71] INFO  com.tydic.neo4j.Neo4jSessionManager - begin init neo4j param
+16:08:38.687 scaffold [Thread-71] INFO  com.tydic.neo4j.Neo4jSessionManager - end init neo4j param={connectionTimeoutMillis=10000, password=neo4j, maxConnectionPoolSize=10, userName=neo4j, uri=bolt://127.0.0.1:7687}
+16:08:38.935 scaffold [Thread-71] INFO  Driver - Direct driver instance 451231477 created for server address 127.0.0.1:7687
+16:08:40.097 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - begin delete  relationName=qq_natural,by sql=MATCH (cust:NaturalPerson)-[t]-(cc:QQ) DELETE t
+16:08:40.123 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  fixThreadNum =0
+16:08:40.123 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  fixThreadNum =1
+16:08:40.124 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  fixThreadNum =2
+16:08:40.124 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  fixThreadNum =3
+16:08:40.124 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  fixThreadNum =4
+16:08:40.124 scaffold [Thread-71] INFO  c.t.b.BatchInsertRelation - BatchInsertRelation  fixThreadNum =5
+16:08:40.125 scaffold [pool-2-thread-3] INFO  c.t.b.BatchInsertRelationThread - begin insert relations run =1
+16:08:40.125 scaffold [pool-2-thread-2] INFO  c.t.b.BatchInsertRelationThread - begin insert relations run =0
+16:08:40.125 scaffold [pool-2-thread-6] INFO  c.t.b.BatchInsertRelationThread - begin insert relations run =2
+16:08:40.133 scaffold [pool-2-thread-7] INFO  c.t.b.BatchInsertRelationThread - begin insert relations run =3
+16:08:40.137 scaffold [pool-2-thread-4] INFO  c.t.b.BatchInsertRelationThread - begin insert relations run =5
+16:08:40.137 scaffold [pool-2-thread-1] INFO  c.t.b.BatchInsertRelationThread - begin insert relations run =4
+16:08:40.296 scaffold [pool-2-thread-1] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [4] need  synchronize [31] qq_natural Rel to neo4j
+16:08:40.296 scaffold [pool-2-thread-7] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [3] need  synchronize [31] qq_natural Rel to neo4j
+16:08:40.296 scaffold [pool-2-thread-3] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [1] need  synchronize [31] qq_natural Rel to neo4j
+16:08:40.298 scaffold [pool-2-thread-6] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [2] need  synchronize [32] qq_natural Rel to neo4j
+16:08:40.300 scaffold [pool-2-thread-4] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [5] need  synchronize [31] qq_natural Rel to neo4j
+16:08:40.308 scaffold [pool-2-thread-6] INFO  c.t.b.BatchInsertRelationThread - end  insert relations run =2
+16:08:40.318 scaffold [pool-2-thread-2] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [0] need  synchronize [31] qq_natural Rel to neo4j
+16:08:41.067 scaffold [pool-2-thread-1] INFO  c.t.b.BatchInsertRelationThread - end  insert relations run =4
+16:08:41.229 scaffold [pool-2-thread-3] INFO  c.t.b.BatchInsertRelationThread - end  insert relations run =1
+16:08:41.320 scaffold [pool-2-thread-4] INFO  c.t.b.BatchInsertRelationThread - end  insert relations run =5
+16:08:41.441 scaffold [pool-2-thread-7] INFO  c.t.b.BatchInsertRelationThread - end  insert relations run =3
+16:08:41.517 scaffold [pool-2-thread-2] INFO  c.t.b.BatchInsertRelationThread - end  insert relations run =0
+16:09:48.315 scaffold [http-nio-8081-exec-1] INFO  c.t.f.s.s.o.c.r.s.CacheableRefreshStrategy - jwtToken发布超过60000ms,需要刷新.
+16:09:48.337 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode startThreadNode confThreadNum=6,intoThreadNum=4,nodeName=NaturalPerson
+16:09:48.337 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  startThread =4
+16:09:48.338 scaffold [Thread-78] INFO  com.tydic.neo4j.Neo4jSessionManager - begin get neo4j neo4jDatasource
+16:09:48.339 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - begin delete  nodeName=NaturalPerson,by sql=match p=()-[r]-() delete r
+16:09:48.342 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - begin delete  nodeName=NaturalPerson,by sql=MATCH (e: NaturalPerson) DELETE e
+16:09:48.420 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =0
+16:09:48.421 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =1
+16:09:48.421 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =2
+16:09:48.421 scaffold [Thread-78] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =3
+16:09:48.424 scaffold [pool-3-thread-2] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =2
+16:09:48.422 scaffold [pool-3-thread-1] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =0
+16:09:48.426 scaffold [pool-3-thread-3] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =1
+16:09:48.439 scaffold [pool-3-thread-4] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =3
+16:09:48.497 scaffold [pool-3-thread-2] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - thread [2] need  synchronize [46] naturalPerson node to neo4j
+16:09:48.497 scaffold [pool-3-thread-2] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - nodeByLabel count=：1
+16:09:48.502 scaffold [pool-3-thread-4] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - thread [3] need  synchronize [50] naturalPerson node to neo4j
+16:09:48.503 scaffold [pool-3-thread-4] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - nodeByLabel count=：1
+16:09:48.509 scaffold [pool-3-thread-1] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - thread [0] need  synchronize [35] naturalPerson node to neo4j
+16:09:48.510 scaffold [pool-3-thread-1] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - nodeByLabel count=：1
+16:09:48.517 scaffold [pool-3-thread-3] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - thread [1] need  synchronize [56] naturalPerson node to neo4j
+16:09:48.517 scaffold [pool-3-thread-3] INFO  c.t.b.BatchInsertNaturalNodeAndRelation - nodeByLabel count=：1
+16:09:48.579 scaffold [pool-3-thread-2] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =2
+16:09:50.012 scaffold [pool-3-thread-4] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =3
+16:09:50.481 scaffold [pool-3-thread-1] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =0
+16:09:50.811 scaffold [pool-3-thread-3] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =1
+16:11:06.798 scaffold [http-nio-8081-exec-4] INFO  c.t.f.s.s.o.c.r.s.CacheableRefreshStrategy - jwtToken发布超过60000ms,需要刷新.
+16:11:06.815 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode startThreadNode confThreadNum=4,intoThreadNum=4,nodeName=QQ
+16:11:06.815 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  startThread =4
+16:11:06.818 scaffold [Thread-83] INFO  com.tydic.neo4j.Neo4jSessionManager - begin get neo4j neo4jDatasource
+16:11:06.819 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - begin delete  nodeName=QQ,by sql=MATCH (cust:NaturalPerson)-[t]-(cc:QQ) DELETE t
+16:11:06.821 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - begin delete  nodeName=QQ,by sql=MATCH (cust:QQ)-[t] DELETE t
+16:11:06.835 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =0
+16:11:06.835 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =1
+16:11:06.835 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =2
+16:11:06.835 scaffold [pool-4-thread-1] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =0
+16:11:06.835 scaffold [pool-4-thread-2] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =1
+16:11:06.839 scaffold [pool-4-thread-3] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =2
+16:11:06.836 scaffold [Thread-83] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =3
+16:11:06.845 scaffold [pool-4-thread-4] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =3
+16:11:06.869 scaffold [pool-4-thread-1] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [0] need  synchronize [47] QQ node to neo4j
+16:11:06.869 scaffold [pool-4-thread-1] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:06.904 scaffold [pool-4-thread-4] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [3] need  synchronize [47] QQ node to neo4j
+16:11:06.904 scaffold [pool-4-thread-4] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:06.905 scaffold [pool-4-thread-3] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [2] need  synchronize [47] QQ node to neo4j
+16:11:06.906 scaffold [pool-4-thread-3] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:06.908 scaffold [pool-4-thread-1] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =0
+16:11:06.909 scaffold [pool-4-thread-2] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [1] need  synchronize [46] QQ node to neo4j
+16:11:06.910 scaffold [pool-4-thread-2] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:06.911 scaffold [pool-4-thread-4] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =3
+16:11:07.185 scaffold [pool-4-thread-3] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =2
+16:11:07.379 scaffold [pool-4-thread-2] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =1
+16:11:44.754 scaffold [http-nio-8081-exec-3] INFO  c.t.f.s.s.o.c.r.s.CacheableRefreshStrategy - jwtToken发布超过60000ms,需要刷新.
+16:11:44.776 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode startThreadNode confThreadNum=4,intoThreadNum=4,nodeName=QQ
+16:11:44.777 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  startThread =4
+16:11:44.778 scaffold [Thread-88] INFO  com.tydic.neo4j.Neo4jSessionManager - begin get neo4j neo4jDatasource
+16:11:44.779 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - begin delete  nodeName=QQ,by sql=MATCH (cust:NaturalPerson)-[t]-(cc:QQ) DELETE t
+16:11:44.782 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - begin delete  nodeName=QQ,by sql=MATCH (cust:QQ)-[t] DELETE t
+16:11:44.812 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =0
+16:11:44.813 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =1
+16:11:44.813 scaffold [pool-5-thread-1] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =0
+16:11:44.814 scaffold [pool-5-thread-2] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =1
+16:11:44.814 scaffold [pool-5-thread-4] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =2
+16:11:44.813 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =2
+16:11:44.817 scaffold [Thread-88] INFO  c.t.backgroundInsert.BatchInsertNode - BatchInsertNode  fixThreadNum =3
+16:11:44.818 scaffold [pool-5-thread-3] INFO  c.t.b.BatchInsertNodeThread - begin insert node run =3
+16:11:44.835 scaffold [pool-5-thread-2] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [1] need  synchronize [46] QQ node to neo4j
+16:11:44.836 scaffold [pool-5-thread-2] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:44.839 scaffold [pool-5-thread-1] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [0] need  synchronize [47] QQ node to neo4j
+16:11:44.839 scaffold [pool-5-thread-1] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:44.839 scaffold [pool-5-thread-4] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [2] need  synchronize [47] QQ node to neo4j
+16:11:44.839 scaffold [pool-5-thread-4] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:44.840 scaffold [pool-5-thread-2] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =1
+16:11:44.842 scaffold [pool-5-thread-3] INFO  c.t.b.BacthInsertQQNodeAndRelation - thread [3] need  synchronize [47] QQ node to neo4j
+16:11:44.842 scaffold [pool-5-thread-3] INFO  c.t.b.BacthInsertQQNodeAndRelation - nodeByLabel count=：1
+16:11:44.996 scaffold [pool-5-thread-1] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =0
+16:11:45.211 scaffold [pool-5-thread-4] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =2
+16:11:45.411 scaffold [pool-5-thread-3] INFO  c.t.b.BatchInsertNodeThread - end  insert Node run =3

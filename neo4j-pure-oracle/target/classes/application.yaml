@@ -1,0 +1,169 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /scaffold
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.128.108:1521:orcl
+    username: ifs
+    password: ifs
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      max-lifetime: 1800000
+      idle-timeout: 30000
+      connection-timeout: 30000
+      data-source-properties:
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        cachePrepStmts: true
+        useServerPrepStmts: true
+      pool-name: Tiny Dicy Pool
+  servlet:
+    ## 若应用结果nginx转发，需要配在nginx增加如下配置： client_max_body_size 2048M;
+    multipart:
+      enabled: true
+      ## 单个文件最大
+      max-file-size: 500MB
+      ## 单词请求--总上传数据总大小
+      max-request-size: 2048MB
+
+  profiles:
+    active: dev
+
+  redis:
+    host: 192.168.129.157
+    port: 6379
+    database: 4
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        min-idle: 0
+        max-idle: 8
+  cache:
+    ##指定spring-cache类型为 redis
+    type: redis
+
+  jackson:
+    time-zone: GMT+8
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    cache-enabled: false
+    ## 是否开启 数据库字段---propertyName 自动映射转换
+    map-underscore-to-camel-case: true
+  configuration-properties:
+    dialect: oracle
+mapper:
+  ### 将propertyName 转换为 数据库字段(多种形式，如驼峰标识(大写) ,驼峰标识(小写)....)
+  style: camelhumpanduppercase
+  before: true
+pagehelper:
+  helper-dialect: oracle
+  row-bounds-with-count: true
+  offset-as-page-num: true
+
+### 配置中心配置
+config:
+  ### 若不使用配置中心： 配置为 none,'' ,或者直接不使用配置.
+  cfgCenter: zookeeper
+  zookeeper:
+    server: 192.168.129.157:2181,192.168.129.158:2181,192.168.129.161:2181
+    configRootPath: /scaffold/${spring.profiles.active}/scaffoldService
+
+###jwtToken 相关配置
+authorization:
+  jwt:
+    secretkey: crmapi2019
+    issuer: tydic-china-ah-tel
+    subject: mobile
+    ##有效期改为7 * 24 * 3600 * 1000 一周
+    expiretime: 604800000
+#    expiretime: 120000
+    refresh:
+      ### HEAD, TAIL 两种模式
+      ## HEAD是指,jwtToken签发超过${time-consuming-or-remaining}时，需要刷新
+      ## TAIL是指，jwtToken有效期不足${time-consuming-or-remaining}时，刷新凑
+      type: HEAD
+      ## 配合type才有实际的含义(单位毫秒)
+      time-consuming-or-remaining: 60000
+      ## 在一定时间范围内，同一个jwtToken可能会存在大批量的请求
+      ## 会造成，大批量的refreshToken请求，在此需要将刷新后的jwtToken缓存,以防止此类情况的发生
+      ## 但是，切记要设置缓存的过期时间(单位是毫秒)
+      refreshed-token-cache-time-ms: 30000
+
+###统一认证相关配置
+oauth2:
+  client-id: 48E0E9DFAFD2462E810C4D6144CD01BE
+  client-secret: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAIq8XP43ibIa+iQzY0AL9BpKf0k5qeP/c6Bu2tco6nwFWlUgMLNaQ+iQFeJbz+c6EIFyfQq/h5jHtVeAC4zLm3rVfxcumvapFNC9CVQwbi1zgmXIVs64vRqSSuw3KI+na2uRcJKCShNcF+fAGa03Erj/6uolVeZcg3opWbPGy7aLAgMBAAECgYAlszQN/OeVF5Gb3r78u4LU1iOqsVnCVDuGgDlFuJ+nngjDEyFIy6Gig+z+evaPHg84LfVew1dEpBhaM7hvxTB1krUy2Cr/SX9TtyLUYsy513SDoUWz1NENWx6rbT/0LmRdVbM2n6EJKbG1F3xhDfPUa0C5Cpr0rMIgRLOM4EyXyQJBAOs4iCwEbqQoRC252xSySzN2TisN//shmR69Md/YLQGZUz4eaJTavp09vZ8Vh0u5dn89IFWZgLF/5BBKZpbVzlcCQQCW/dfbKQvxkRgEWzIEIQPteTliPhUgWWwlQQQvcoTphJccIN47d0iEOC20nAJ3Z1AdRoBhaOPh6f+2MVyDU9DtAkAJ/9M6G84gSF3tm7MGhDXSMDtOdT/mix0ZQ221WFlBciUpxN0pRstHn/JJqv6fZ3j0G8MeIHJqGUe2sZL+4oPtAkBmsA7MqzbHPFFkLQ1wB3AfYlFngidmD8rf7z7EchL4qccHR0c8lBxKZ9aVvYBj6mxu7JLFLMvGyhixtRJg8nDlAkEA4uZ/rqnevcSeIvsRiIVWeQUkJZBIJMn4LTJs4Knml3IFRAXeTG9XgoSJKTx5N1WvtgIZZyDpm6Axq54Knr851A==
+  base-url: http://192.168.129.43:10010
+  access-token-url: ${oauth2.base-url}/oauth/token_origin
+  redirect-url: http://127.0.0.1:8000
+  ## 统一认证，单点接口地址
+  sso-url: ${oauth2.base-url}/oauth/sso_orgin
+
+###系统管理相关配置
+eda:
+  ws:
+    url: http://192.168.128.107:7002/edaws/service/DBPService
+  #### 获取用户信息的app_id
+  app:
+    id: 228
+  #### 获取用户数据权限的app_id
+  ### 通常 eda.app.id == eda.data_center.app.id ,但是有部分新建系统，如果给用户重新赋权一遍数据权限工作量会比较大， 所以就复用已有系统的数据权限(政商校就是此策略)
+  data_center:
+    app:
+      id: 228
+
+
+###附件下载存放路径配置
+attachment:
+  enable: true
+  store:
+    baseDir: c:/scaffold/file
+    temp: ${attachment.store.baseDir}/temp
+    business: ${attachment.store.baseDir}/business
+    deleted:  ${attachment.store.baseDir}/deleted
+
+### redis 缓存增加前缀
+###为了解决当前应用过多，而缓存key的命名规则又相同，造成缓存key冲突，所以在cacheName前，增加前缀
+redis:
+  cache-name:
+    prefix: SCAFFOLD
+  cache:
+    ttl:
+      ##单位为秒
+      common: 7200
+      ticket: 1800
+
+
+fixThrea:
+  fixThreadNum: 6
+
+neo4j:
+    uri: bolt://127.0.0.1:7687
+  # uri: bolt://192.168.129.44:7687
+    userName: neo4j
+    password: neo4j
+    connectionTimeoutMillis: 10000
+    maxConnectionPoolSize: 10
+
+dynamicsql:
+  tableName: TB_REAS_OUTER_SQL_CONFIG
+
+### 每日序列
+sequence:
+  enable: true
+  list:
+    - type: ORDER
+      prefix: ${sequence.list[0].type}-
+      pattern: "yyMMdd"
+      length: 4
+    - type: PROJECT
+      prefix: ${sequence.list[1].type}_
+      pattern: "yyyyMMddHHmmss"
+      length: 8

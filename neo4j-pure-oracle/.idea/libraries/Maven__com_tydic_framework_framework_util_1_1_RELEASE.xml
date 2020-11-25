@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.tydic.framework:framework-util:1.1-RELEASE">
+    <CLASSES>
+      <root url="jar://G:/work/mavenRepository/repository/com/tydic/framework/framework-util/1.1-RELEASE/framework-util-1.1-RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://G:/work/mavenRepository/repository/com/tydic/framework/framework-util/1.1-RELEASE/framework-util-1.1-RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://G:/work/mavenRepository/repository/com/tydic/framework/framework-util/1.1-RELEASE/framework-util-1.1-RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

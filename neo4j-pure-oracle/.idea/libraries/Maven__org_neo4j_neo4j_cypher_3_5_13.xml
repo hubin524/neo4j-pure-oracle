@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.neo4j:neo4j-cypher:3.5.13">
+    <CLASSES>
+      <root url="jar://G:/work/mavenRepository/repository/org/neo4j/neo4j-cypher/3.5.13/neo4j-cypher-3.5.13.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://G:/work/mavenRepository/repository/org/neo4j/neo4j-cypher/3.5.13/neo4j-cypher-3.5.13-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://G:/work/mavenRepository/repository/org/neo4j/neo4j-cypher/3.5.13/neo4j-cypher-3.5.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

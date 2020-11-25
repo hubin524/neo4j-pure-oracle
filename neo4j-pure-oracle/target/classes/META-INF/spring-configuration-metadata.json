@@ -1,0 +1,47 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator",
+      "name": "attachment.store",
+      "type": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator"
+    },
+    {
+      "sourceType": "com.tydic.scaffold.common.config.SequenceConfig",
+      "name": "sequence",
+      "type": "com.tydic.scaffold.common.config.SequenceConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator",
+      "name": "attachment.store.base-dir",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator",
+      "name": "attachment.store.business",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator",
+      "name": "attachment.store.deleted",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator",
+      "name": "attachment.store.logger",
+      "type": "org.slf4j.Logger"
+    },
+    {
+      "sourceType": "com.tydic.framework.config.file.AttachmentStorePropertiesAndDirCreator",
+      "name": "attachment.store.temp",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.tydic.scaffold.common.config.SequenceConfig",
+      "name": "sequence.list",
+      "type": "java.util.List<com.tydic.scaffold.common.config.SequenceConfig.Sequence>"
+    }
+  ]
+}

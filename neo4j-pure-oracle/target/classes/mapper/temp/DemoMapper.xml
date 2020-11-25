@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tydic.scaffold.temp.dao.DemoMapper">
+    <resultMap id="BaseResultMap" type="com.tydic.scaffold.temp.model.Demo">
+        <id column="DEMO_ID" property="demoId" jdbcType="NUMERIC"/>
+        <result column="DEMO_NAME" property="demoName" jdbcType="VARCHAR"/>
+        <result column="AGE" property="age" jdbcType="NUMERIC"/>
+        <result column="BIRTHDATE" property="birthdate" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        DEMO_ID
+        ,
+        DEMO_NAME,
+        AGE,
+        BIRTHDATE
+    </sql>
+
+    <!--    <select id="qryDemo" resultMap="BaseResultMap" parameterType="com.tydic.scaffold.temp.model.Demo">-->
+    <select id="qryDemo" resultType="com.tydic.scaffold.temp.model.Demo" parameterType="com.tydic.scaffold.temp.model.Demo">
+        select
+        <include refid="Base_Column_List"/>
+        from TB_TEMP_DEMO
+        <where>
+            <if test="age != null">
+              and   AGE = #{age}
+            </if>
+
+            <if test="demoName != null">
+                and  demo_name like #{demoName} || '%'
+            </if>
+        </where>
+
+        order by demo_id asc
+    </select>
+
+    <update id="updateDemo" parameterType="com.tydic.scaffold.temp.model.Demo">
+        update TB_TEMP_DEMO
+        <set>
+            <!-- 不允许修改name -->
+            <!--   <if test="name != null" >
+                   NAME = #{name,jdbcType=VARCHAR},
+               </if>-->
+            <if test="age != null">
+                  AGE = #{age,jdbcType=DECIMAL},
+            </if>
+            <if test="birthdate != null">
+                  BIRTHDATE = #{birthdate,jdbcType=DATE},
+            </if>
+        </set>
+        where demo_id = #{demoId}
+    </update>
+
+</mapper>

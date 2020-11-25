@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tydic.scaffold.batchInsertNeo4j.dao.QueryNaturalPersonsDao">
+    <select id="QueryNaturalPersons" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.NaturalPersonEntity">
+        select encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+               oneid_service_nbr as "oneidServiceNbr",
+               oneid_prd_inst_id as "oneidPrdInstId",
+               'NaturalPerson' as "oneidLabels",
+               oneid_prd_inst_name as "oneidPrdInstName"
+          from tb_b_ft_oneid_natural_person
+         where mod(substr(oneid_prd_inst_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.NaturalRelEntity">
+          select a.person_rel          as "personRel",
+                 a.a_oneid_prd_inst_id as "aOneidPrdInstId",
+                 a.z_oneid_prd_inst_id as "zOneidPrdInstId",
+                 'PersonRel' as "oneidLabels"
+          from tb_b_ft_natural_person_rel a
+         where mod(substr(a.a_oneid_prd_inst_id,-3,3),#{mod})=#{index}
+    </select>
+
+
+    <select id="QueryUserNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.UserEntity">
+        select a.prd_inst_id as "prdInstId",
+               a.service_nbr as "serviceNbr",
+               a.prd_inst_name as "prdInstName",
+               a.imei as "imei",
+               a.meid as "meid",
+               a.user_account as "userAccount",
+               a.sim_card as "simCard",
+               a.g_imsi as "gImsi",
+               a.l_imsi as "lImsi",
+               a.c_imsi as "cImsi",
+               a.net_num as "netNum",
+               a.cust_id as "custId",
+               a.acct_id as "acctId",
+               'User' as "oneidLabels",
+               a.prd_inst_stas_id as "prdInstStasId",
+               a.prd_id as "prdId",
+               to_char(a.install_date, 'yyyy-mm-dd') as "installDate",
+               to_char(a.complete_date, 'yyyy-mm-dd') as "completeDate"
+         from tb_b_ft_oneid_person a
+         where mod(substr(a.prd_inst_id,-3,3),#{mod})=#{index}
+    </select>
+
+
+    <select id="QueryUserRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.UserRelEntity">
+         select a.prd_inst_id       as "prdInstId",
+                a.oneid_prd_inst_id as "oneidPrdInstId",
+                a.latn_id           as "latnId"
+           from tb_b_ft_oneid_person_rel a
+         where mod(substr(a.prd_inst_id,-3,3),#{mod})=#{index}
+    </select>
+    <select id="QueryFamilyNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.FamilyEntity">
+         select a.encrypt_virtual_family_id as "encryptVirtualFamilyId",
+                a.virtual_family_id as "virtualFamilyId",
+                a.virtual_family_type as "virtualFamilyType",
+                b.contact_nbr as "keyMan"
+           from oneid_virtual_family a,oneid_family_keyman b
+         where mod(substr(a.virtual_family_id,-3,3),#{mod})=#{index} and a.virtual_family_id =b.virtual_family_id(+)
+    </select>
+
+
+    <select id="QueryLittleFamilyNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.LittleFamilyEntity">
+         select a.family_id as "familyId",
+                a.householder_latn_id as "householderLatnId",
+                a.householder_prd_inst_id as "householderPrdInstId",
+                a.householder_service_nbr as "householderServiceNbr",
+                a.householder_cust_id as "householderCustId",
+                a.householder_acct_id as "householderAcctId",
+                a.prod_offer_inst_id as "prodOfferInstId",
+                decode( trim(b.contact_nbr),null,'-1','NULL','-1',trim(b.contact_nbr))  as "keyMan"
+           from oneid_family a,oneid_family_keyman b
+         where mod(substr(a.family_id,-3,3),#{mod})=#{index} and a.family_id =b.family_id(+)
+    </select>
+
+    <select id="QueryLittleFamilyAndFamilyRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.LittleFamilyRelEntity">
+         select a.encrypt_virtual_family_id as "encryptVirtualFamilyId",
+                a.virtual_family_id as "virtualFamilyId",
+                a.family_id as "familyId"
+           from oneid_family_rel a
+         where mod(substr(a.virtual_family_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryLittleFamilyAndNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.LittleFamilyRelEntity">
+        select decode(c.encrypt_virtual_family_id ,null,'-1',c.encrypt_virtual_family_id) as "encryptVirtualFamilyId",
+                decode(c.virtual_family_id ,null,'-1',c.virtual_family_id)as "virtualFamilyId",
+                a.family_id as "familyId",
+                a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+                a.oneid_prd_inst_id as "oneidPrdInstId"
+           from oneid_family_person_rel a, oneid_family_rel c
+         where mod(substr(a.family_id,-3,3),#{mod})=#{index} and a.family_id=c.family_id(+)
+    </select>
+
+    <select id="QueryEnterpriseNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.EnterpriseEntity">
+         select a.latn_id as  "latnId",
+                a.client_id as  "clientId",
+                a.client_name as  "clientName",
+                a.org_uscc as  "orgUscc",
+                a.regno as  "regno",
+                a.licid as  "licid",
+                a.status_cd as  "statusCd",
+                a.found_date as  "foundDate",
+                a.legal_repr as  "legalRepr",
+                a.register_addr as  "registerAddr",
+                a.org_phone as  "orgPhone",
+                a.bd_location as  "bdLocation",
+                a.city_code as  "cityCode",
+                a.city_name as  "cityName",
+                a.county_code as  "countyCode",
+                a.county_name as  "countyName",
+                a.office_addr as  "officeAddr",
+                wm_concat(b.prd_inst_name || ':' || b.service_nbr) as "keyMan"
+           from oneid_company a,oneid_company_keyman b
+         where mod(substr(a.client_id,-3,3),#{mod})=#{index} and a.client_id=b.client_id(+)
+         group by a.latn_id,
+                     a.client_id,
+                     a.client_name,
+                     a.org_uscc,
+                     a.regno,
+                     a.licid,
+                     a.status_cd,
+                     a.found_date,
+                     a.legal_repr,
+                     a.register_addr,
+                     a.org_phone,
+                     a.bd_location,
+                     a.city_code,
+                     a.city_name,
+                     a.county_code,
+                     a.county_name,
+                     a.office_addr
+    </select>
+
+    <select id="QueryEnterpriseRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.EnterpriseNaturalRelEntity">
+         select a.client_latn_id as  "latnId",a.client_latn_id as  "clientLatnId",
+                a.client_id as  "clientId",
+                a.client_name as  "clientName",
+                a.encrypt_oneid_prd_inst_id as  "encryptOneidPrdInstId",
+                a.oneid_prd_inst_id as  "oneidPrdInstId"
+           from oneid_company_person_rel a
+         where mod(substr(a.oneid_prd_inst_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryQqNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.qq_id as  "qqId"
+           from oneid_internet a
+         where mod(substr(a.qq_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryQqNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.qq_id as "qqId"
+           from oneid_natural_person_id_qq a
+         where mod(substr(a.qq_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryweChatNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.wechat_id as  "wechatId"
+           from oneid_internet a
+         where mod(substr(a.wechat_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryweChatNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.wechat_id as "wechatId"
+           from oneid_natural_person_id_wechat a
+         where mod(substr(a.wechat_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryYoukuNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.youku_id as  "youkuId"
+           from oneid_internet a
+         where mod(substr(a.youku_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryYoukuNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.youku_id as "youkuId"
+           from oneid_natural_person_id_youku a
+         where mod(substr(a.youku_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryWeiboNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.weibo_id as  "weiboId"
+           from oneid_internet a
+         where mod(substr(a.weibo_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryWeiboNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.weibo_id as "weiboId"
+           from oneid_natural_person_id_weibo a
+         where mod(substr(a.weibo_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryTaobaoNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.taobao_id as  "taobaoId"
+           from oneid_internet a
+         where mod(substr(a.taobao_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryTaobaoNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.taobao_id as "taobaoId"
+           from oneid_natural_person_id_taobao a
+         where mod(substr(a.taobao_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryJdNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.jd_id as  "jdId"
+           from oneid_internet a
+         where mod(substr(a.jd_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryJdNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.jd_id as "jdId"
+           from oneid_natural_person_id_jd a
+         where mod(substr(a.jd_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryEmailNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.email_id as  "emailId"
+           from oneid_internet a
+         where mod(substr(a.email_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryEmailNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.email_id as "emailId"
+           from oneid_natural_person_id_email a
+         where mod(substr(a.email_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryAqiyiNode" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select a.aqiyi_id as  "aqiyiId"
+           from oneid_internet a
+         where mod(substr(a.aqiyi_id,-3,3),#{mod})=#{index}
+    </select>
+
+    <select id="QueryAqiyiNaturalRel" parameterType="java.util.Map" resultType="com.tydic.scaffold.batchInsertNeo4j.model.InternetAccountEntity">
+         select
+            a.encrypt_oneid_prd_inst_id as "encryptOneidPrdInstId",
+            a.oneid_prd_inst_id as "oneidPrdInstId",
+            a.latn_id as "latnId",
+            a.prd_inst_id as "prdInstId",
+            a.service_nbr as "serviceNbr",
+            a.aqiyi_id as "aqiyiId"
+           from oneid_natural_person_id_aqiyi a
+         where mod(substr(a.aqiyi_id,-3,3),#{mod})=#{index}
+    </select>
+
+
+</mapper>
